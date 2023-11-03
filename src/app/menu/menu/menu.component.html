@@ -1,0 +1,46 @@
+<div class="contenedor-padre">
+    <mat-toolbar class="barra" color="warn">
+        <mat-toolbar-row>
+            <button (click)="cajon.toggle()" mat-icon-button>
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>
+                CRUD UTL&nbsp;
+            </span>
+            <span>
+                <a mat-stoked-button href="">IEVN - UTL</a>
+            </span>
+
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-sidenav-container class="contenido">
+        <mat-sidenav style="min-width: 300px;" #cajon mode="side" opened>
+            <mat-nav-list>
+                <a mat-list-item routerLinkActive="active" routeLink="Agregar">
+                    <mat-icon color="accent">Add</mat-icon>
+                    Agregar Alumno
+                </a>
+            </mat-nav-list>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            * Opciones
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-nav-list>
+                        <a mat-list-item href="#">
+                            Acerca de
+                        </a>
+                        <a mat-list-item href="#">
+                            Ayuda
+                        </a>
+                    </mat-nav-list>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-sidenav>
+        <mat-sidenav-container class="padding-10">
+            <!--<router-outlet></router-outlet>-->
+        </mat-sidenav-container>
+    </mat-sidenav-container>
+</div>
