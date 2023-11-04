@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-6">
+        <form [formGroup]="alumno" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="matricula" class="form-label">Matricula</label>
+                <input type="text" placeholder="Matricula" id="matricula" name="matricula" 
+                class="form-control" formControlName="matricula">
+            </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre" 
+                class="form-control" formControlName="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="apaterno" class="form-label">Apellido Paterno</label>
+                <input type="text" placeholder="Apellido Paterno" id="apaterno" name="apaterno" 
+                class="form-control" formControlName="apaterno">
+            </div>
+            <div class="mb-3">
+                <label for="amaterno" class="form-label">Apellido Materno</label>
+                <input type="text" placeholder="Apellido Materno" id="amaterno" name="amaterno" 
+                class="form-control" formControlName="amaterno">
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="text" placeholder="Correo" id="correo" name="correo" 
+                class="form-control" formControlName="correo">
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit">Agregar</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="col-6">
+
+    </div>
+</div>
