@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-header">
+        Lista de productos
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                Filtrar por:
+            </div>
+            <div class="col-md-4">
+                <input [(ngModel)]="listFilter" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Filtro: {{listFilter}}</h3>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table" *ngIf="alumnosIric.length">
+                <thead>
+                    <tr>
+                        
+                        <th>Matricula</th>
+                        <th>Nombre</th>
+                        <th>Apaterno</th>
+                        <th>Amaterno</th>
+                        <th>Correo</th>
+        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let alumno of dataSource ">
+                        <td>{{alumno.matricula}}</td>
+                        <td>{{alumno.nombre|uppercase}}</td>
+                        <td>{{alumno.aPaterno}}</td>
+                        <td>{{alumno.aMaterno}}</td>
+                        <td>{{alumno.correo}}</td>
+                
+                        <td><button mat-flat-button color="primary" [routerLink]="['/Editar',alumno.matricula]"> Editar </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
